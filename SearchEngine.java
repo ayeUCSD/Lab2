@@ -25,7 +25,7 @@ class Handler implements URLHandler {
     public String handleRequest(URI url) {
         // checks if path is "empty"
         if (url.getPath().equals("/")) {
-            return String.format("Here is whats in the List!\n" + String.join(", ", list));
+            return String.format("Here is whats in the List!:\n" + String.join(", ", list));
         } else if (url.getPath().equals("/addFiller")) {
             list.add("filler");
             return String.format("it added the word \"filler\"!");
